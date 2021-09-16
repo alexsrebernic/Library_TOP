@@ -3,15 +3,16 @@ function Book(title,author,pages,read){
     this.author = author
     this.pages = pages
     this.read = read
-    let readBoolean = function(read){
+    let readFalseOrTrue = (read) => {
         if(read){
             return "Already read!"
-        } else {
-            return "Not read yet"
-        }
+
+    } else {
+        return "Not read yet"
     }
+}
     this.info = function(){
-        return title + " by " + author + " ," + pages + " pages," + readBoolean(read)
+        return this.title + " by " + this.author  + "," + this.pages + " pages, " + readFalseOrTrue(this.read)
     }
 }
 let myLibrary = []
@@ -22,6 +23,6 @@ function addBookToLibrary(){
 }
 function displayBooks(){
     for(let l = 0, n = myLibrary.length; l < n ; l++){
-        
+
     } 
 }

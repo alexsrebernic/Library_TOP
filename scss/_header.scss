@@ -1,15 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap');
-$backgroundColor:#7F7C82;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@0;1&display=swap');
+$backgroundColor:#495464;
+$secondaryColor:#BBBFCA;
+$tertiaryColor:#E8E8E8;
+$fourColor:#F4F4F2;
 $letterColor:#F3F1F5;
 $fontFamily:'Raleway', sans-serif;
 #header {
-    background-color: $backgroundColor;
-    color: $letterColor;
-    text-align: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: $fontFamily;
-    height: 8vh;
-    font-size: 20px;
+    width: 100%;
+    h1 {
+        font-family: $fontFamily;
+        text-decoration: underline;
+        width: 10rem;
+        text-align: center;
+        margin: 5px;
+        transition: 0.3s ease;
+
+    }
+    button {
+        align-self: flex-end;
+        border: none;
+        margin: 1.25rem;
+        font-size: 1.0625rem;
+        transition: 0.3s ease;
+    }
+    button:hover {
+        cursor: pointer;
+        text-decoration-color: gray;
+        text-decoration: underline;
+        color: gray;
+    }
+    img {
+        width: 70px;
+        transition: 0.3s ease;
+
+    }
 }
