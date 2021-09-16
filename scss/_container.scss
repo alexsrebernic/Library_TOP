@@ -8,18 +8,21 @@ $fontFamily:'Raleway', sans-serif;
 
 #container {
    width: 80%;
-   height: 65vh;
+   height: 66.6vh;
    margin: auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
    #addBook{
-       margin: 10px;
+       margin-top: 10px;
        border: 1px solid black;
-        border-radius: 10px;
-       padding: 5px;
+        border-radius: 6px;
+       padding: 10px;
        font-size: 15px;
        display: flex;
        align-items: center;
        transition: 0.3s ease;
-
        
        svg {
         margin-left: 4px;
@@ -27,6 +30,8 @@ $fontFamily:'Raleway', sans-serif;
         transition: 0.3s ease;
        }
    }
+
+  
    #addBook:hover {
     border: 1px solid gray;
     color: gray;
@@ -34,11 +39,14 @@ $fontFamily:'Raleway', sans-serif;
     svg {
         color:gray;
     }
+   
 }
     #catalog {
         width: 100%;
         height: 90%;
         display: flex;
         flex-direction: row;
+        border: 1px solid gray;
+        margin-top: 5px;
     }
 }

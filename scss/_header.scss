@@ -13,13 +13,13 @@ $fontFamily:'Raleway', sans-serif;
     width: 100%;
     h1 {
         font-family: $fontFamily;
-        text-decoration: underline;
         width: 10rem;
         text-align: center;
         margin: 5px;
         transition: 0.3s ease;
 
     }
+    
     button {
         align-self: flex-end;
         border: none;
@@ -29,8 +29,6 @@ $fontFamily:'Raleway', sans-serif;
     }
     button:hover {
         cursor: pointer;
-        text-decoration-color: gray;
-        text-decoration: underline;
         color: gray;
     }
     img {
