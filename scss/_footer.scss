@@ -5,3 +5,23 @@ $tertiaryColor:#E8E8E8;
 $fourColor:#F4F4F2;
 $letterColor:#F3F1F5;
 $fontFamily:'Raleway', sans-serif;
+footer {
+    height: 12.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: $fontFamily;
+    p {
+        margin: 5px;
+    }
+   svg  {
+    transition: 0.3s ease;   
+    margin: 5px;
+}
+
+   svg:hover {
+    transform: scale(1.22);
+   }
+  
+}
