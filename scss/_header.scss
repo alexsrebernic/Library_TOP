@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap');
+$backgroundColor:#7F7C82;
+$letterColor:#F3F1F5;
+$fontFamily:'Raleway', sans-serif;
+#header {
+    background-color: $backgroundColor;
+    color: $letterColor;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $fontFamily;
+    height: 8vh;
+    font-size: 20px;
+}
