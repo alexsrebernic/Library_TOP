@@ -154,6 +154,17 @@ footer svg:hover {
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-transform: scale(0);
+          transform: scale(0);
 }
 
 #backgroundPopUp #popUp {
@@ -175,6 +186,13 @@ footer svg:hover {
   width: 25rem;
   height: 31.25rem;
   font-family: "Roboto", sans-serif;
+  -webkit-animation: drop 0.5s ease forwards;
+          animation: drop 0.5s ease forwards;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  box-shadow: -1px 1px 43px -17px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -1px 1px 43px -17px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 1px 43px -17px rgba(0, 0, 0, 0.75);
 }
 
 #backgroundPopUp #popUp svg {
@@ -208,6 +226,8 @@ footer svg:hover {
   border-radius: 10px;
   width: 80%;
   height: 10%;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 #backgroundPopUp #popUp #formPop select {
@@ -222,6 +242,198 @@ footer svg:hover {
   -ms-flex-item-align: start;
       align-self: flex-start;
   margin-left: 40px;
+}
+
+#backgroundPopUp #popUp #formPop #submit {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+#backgroundPopUp #popUp #formPop #submit:hover {
+  background-color: #E8E8E8;
+}
+
+@-webkit-keyframes drop {
+  0% {
+    -webkit-transform: translateY(-400px);
+            transform: translateY(-400px);
+    opacity: 0;
+  }
+  20% {
+    -webkit-transform: translateY(-200px);
+            transform: translateY(-200px);
+  }
+  30% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0.5;
+  }
+  70% {
+    -webkit-transform: translateY(80px);
+            transform: translateY(80px);
+  }
+  75% {
+    -webkit-transform: translateY(110px);
+            transform: translateY(110px);
+  }
+  80% {
+    -webkit-transform: translateY(120px);
+            transform: translateY(120px);
+  }
+  85% {
+    -webkit-transform: translateY(130px);
+            transform: translateY(130px);
+  }
+  90% {
+    -webkit-transform: translateY(140px);
+            transform: translateY(140px);
+  }
+  100% {
+    -webkit-transform: translateY(150px);
+            transform: translateY(150px);
+    opacity: 1;
+  }
+}
+
+@keyframes drop {
+  0% {
+    -webkit-transform: translateY(-400px);
+            transform: translateY(-400px);
+    opacity: 0;
+  }
+  20% {
+    -webkit-transform: translateY(-200px);
+            transform: translateY(-200px);
+  }
+  30% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0.5;
+  }
+  70% {
+    -webkit-transform: translateY(80px);
+            transform: translateY(80px);
+  }
+  75% {
+    -webkit-transform: translateY(110px);
+            transform: translateY(110px);
+  }
+  80% {
+    -webkit-transform: translateY(120px);
+            transform: translateY(120px);
+  }
+  85% {
+    -webkit-transform: translateY(130px);
+            transform: translateY(130px);
+  }
+  90% {
+    -webkit-transform: translateY(140px);
+            transform: translateY(140px);
+  }
+  100% {
+    -webkit-transform: translateY(150px);
+            transform: translateY(150px);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes up {
+  0% {
+    -webkit-transform: translateY(150px);
+            transform: translateY(150px);
+    opacity: 1;
+  }
+  10% {
+    -webkit-transform: translateY(160px);
+            transform: translateY(160px);
+  }
+  20% {
+    -webkit-transform: translateY(170px);
+            transform: translateY(170px);
+  }
+  30% {
+    -webkit-transform: translateY(180px);
+            transform: translateY(180px);
+  }
+  40% {
+    -webkit-transform: translateY(190px);
+            transform: translateY(190px);
+  }
+  50% {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+  }
+  70% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  80% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  90% {
+    -webkit-transform: translateY(-200px);
+            transform: translateY(-200px);
+  }
+  100% {
+    -webkit-transform: translateY(-400px);
+            transform: translateY(-400px);
+    opacity: 0;
+  }
+}
+
+@keyframes up {
+  0% {
+    -webkit-transform: translateY(150px);
+            transform: translateY(150px);
+    opacity: 1;
+  }
+  10% {
+    -webkit-transform: translateY(160px);
+            transform: translateY(160px);
+  }
+  20% {
+    -webkit-transform: translateY(170px);
+            transform: translateY(170px);
+  }
+  30% {
+    -webkit-transform: translateY(180px);
+            transform: translateY(180px);
+  }
+  40% {
+    -webkit-transform: translateY(190px);
+            transform: translateY(190px);
+  }
+  50% {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+  }
+  70% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  80% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  90% {
+    -webkit-transform: translateY(-200px);
+            transform: translateY(-200px);
+  }
+  100% {
+    -webkit-transform: translateY(-400px);
+            transform: translateY(-400px);
+    opacity: 0;
+  }
 }
 
 * {

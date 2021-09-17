@@ -11,6 +11,11 @@ $fontFamily:'Roboto', sans-serif;;
     background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
     top: 0;
+    display: flex;
+    justify-content: center;
+    display: none;
+    transition: 0.3s ease;
+    transform: scale(0);
     #popUp{
         display: flex;
         flex-direction: column;
@@ -21,6 +26,11 @@ $fontFamily:'Roboto', sans-serif;;
         width: 25rem;
         height: 31.25rem;
         font-family: $fontFamily;
+        animation: drop 0.5s ease forwards;
+        transition: 0.3s ease;
+        box-shadow: -1px 1px 43px -17px rgba(0,0,0,0.75);
+        -webkit-box-shadow: -1px 1px 43px -17px rgba(0,0,0,0.75);
+        -moz-box-shadow: -1px 1px 43px -17px rgba(0,0,0,0.75);
         svg {
             align-self: flex-end;
             margin: 5px;
@@ -33,13 +43,16 @@ $fontFamily:'Roboto', sans-serif;;
             align-items: center;
             width: 100%;
             height: 80%;
+           
             input {
                 border: none;
                 background-color: rgba($color: #d4d4d4, $alpha: 0.18);
                 border-radius: 10px;
                 width: 80%;
                 height: 10%;
+                transition: 0.3s ease;
             }
+            
             select {
                 border: none;
                 background-color: rgba($color: #d4d4d4, $alpha: 0.18);
@@ -47,10 +60,90 @@ $fontFamily:'Roboto', sans-serif;;
                 width: 50%;
                 height: 10%;
             }
+           
             label {
                 align-self: flex-start;
                 margin-left: 40px;
             }
+            #submit {
+                transition: 0.3s ease;
+                cursor: pointer;
+
+            }
+            #submit:hover{
+                background-color: $tertiaryColor;
+            }
         }
     }
+}
+
+// Animation
+
+@keyframes drop {
+    0%{transform: translateY(-400px);
+    opacity: 0;}
+    20%{
+        transform: translateY(-200px);
+    }
+    30%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(50px);
+        opacity: 0.5;
+    }
+    70%{
+        transform: translateY(80px);
+    }
+    75%{
+        transform: translateY(110px);
+    }
+    80%{
+        transform: translateY(120px);
+    }
+    85%{
+        transform: translateY(130px);
+    }
+    90%{
+        transform: translateY(140px);
+    }
+    100%{
+        transform: translateY(150px);
+        opacity: 1;
+    }
+}
+@keyframes up {
+    0% {
+        transform: translateY(150px);
+        opacity: 1;
+    }
+    10%{
+        transform: translateY(160px);
+    }
+    20%{
+        transform: translateY(170px);
+    }
+    30%{
+        transform: translateY(180px);
+    }
+    40%{
+        transform: translateY(190px);
+    }
+    50%{
+        transform: translateY(200px);
+    }
+    70%{
+        transform: translateY(100px);
+    }
+    80%{
+        transform: translateY(0px);
+    }
+    90%{
+        transform: translateY(-200px);
+    }
+    100%{
+        transform: translateY(-400px);
+        opacity: 0;
+    }
+
 }

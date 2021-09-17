@@ -2,6 +2,22 @@ const logInButton = document.querySelector("#logIn")
 const addBookButton = document.querySelector("#addBook")
 const catalogDisplay = document.querySelector("#catalog")
 
+const backgroundPopUpElement = document.querySelector("#backgroundPopUp")
+const closePopUpElement = document.querySelector("#close")
+
+addBookButton.onclick = () => displayPopUp();
+closePopUpElement.onclick = () => closePopUp();
+
+function displayPopUp (){
+backgroundPopUpElement.style.display = "flex"
+backgroundPopUpElement.style.transform = "scale(1)"
+
+}
+function closePopUp (){
+backgroundPopUpElement.style.display = "none"
+
+}
+
 
 function Book(title,author,pages,read){
     this.title = title
