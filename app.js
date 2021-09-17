@@ -1,3 +1,8 @@
+const logInButton = document.querySelector("#logIn")
+const addBookButton = document.querySelector("#addBook")
+const catalogDisplay = document.querySelector("#catalog")
+
+
 function Book(title,author,pages,read){
     this.title = title
     this.author = author

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+$backgroundColor:#495464;
+$secondaryColor:#BBBFCA;
+$tertiaryColor:#E8E8E8;
+$fourColor:#F4F4F2;
+$letterColor:#F3F1F5;
+$fontFamily:'Roboto', sans-serif;;
+#backgroundPopUp{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    #popUp{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: white;
+        border-radius: 15px;
+        width: 25rem;
+        height: 31.25rem;
+        font-family: $fontFamily;
+        svg {
+            align-self: flex-end;
+            margin: 5px;
+            cursor: pointer;
+        }
+        #formPop {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%;
+            height: 80%;
+            input {
+                border: none;
+                background-color: rgba($color: #d4d4d4, $alpha: 0.18);
+                border-radius: 10px;
+                width: 80%;
+                height: 10%;
+            }
+            select {
+                border: none;
+                background-color: rgba($color: #d4d4d4, $alpha: 0.18);
+                border-radius: 15px;
+                width: 50%;
+                height: 10%;
+            }
+            label {
+                align-self: flex-start;
+                margin-left: 40px;
+            }
+        }
+    }
+}

@@ -24,7 +24,40 @@
         </div>
         <div id="catalog"></div>
     </div>
-   
+    <div id="backgroundPopUp">
+        <div id="popUp">
+        <svg xmlns="http://www.w3.org/2000/svg" style="width: 30px;" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        <h1>New book</h1>
+        <form id="formPop" action="">
+            <label for="titleInput">Title:</label> 
+            <br>
+            <input type="text" placeholder="Title" id="titleInput">
+            <br>
+            <label for="authorInput">Author:</label>
+            <br>
+             <input type="text" placeholder="Author" id="authorInput">
+            <br>
+            <label for="pagesInput">Number of pages:</label> 
+            <br>
+            <input type="number" placeholder="Pages" id="pagesInput">
+            <br>
+            <label for="urlInput">URL Image: <span>(Optional)</span></label> 
+            <br>
+            <input type="text" placeholder="URL" id="urlInput">
+            <br>
+            <label for="readSelect">Have you read it?:</label> 
+            <br>
+            <select name="readSelect" id="read">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    </div>
     <script src="app.js"></script>
 </body>
 <footer>
