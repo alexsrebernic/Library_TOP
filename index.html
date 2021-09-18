@@ -14,15 +14,18 @@
         <h1>Library</h1>
     </div>
     <div id="container">
-        <div id="buttonsInput">
-          
+        <div id="buttonsInput">      
                 <button id="addBook">Add Book<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                  </svg></button>
-
-         
+                  </svg></button>   
         </div>
-        <div id="catalog"></div>
+        <div id="containerCatalog"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          <div id="catalog"></div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg></div>
     </div>
     <div id="backgroundPopUp">
         <div id="popUp">
@@ -30,31 +33,28 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         <h1>New book</h1>
-        <form id="formPop" action="">
+        <form id="formPop" action="/" method="GET">
             <label for="titleInput">Title:</label> 
             <br>
-            <input type="text" placeholder="Title" id="titleInput">
+            <input name="title" type="text" placeholder="Title" id="titleInput" minlength="1" maxlength="28" required>
             <br>
             <label for="authorInput">Author:</label>
             <br>
-             <input type="text" placeholder="Author" id="authorInput">
+             <input name="author" type="text" placeholder="Author" id="authorInput" minlength="1" maxlength="25" required>
             <br>
-            <label for="pagesInput">Number of pages:</label> 
+            <label  for="pagesInput">Number of pages:</label> 
             <br>
-            <input type="number" placeholder="Pages" id="pagesInput">
+            <input name="pages" type="number" placeholder="Pages" id="pagesInput" min="1" max="10000" required>
             <br>
             <label for="urlInput">URL Image: <span>(Optional)</span></label> 
             <br>
-            <input type="text" placeholder="URL" id="urlInput">
+            <input name="url" type="text" placeholder="URL" id="urlInput">
             <br>
-            <label for="readSelect">Have you read it?:</label> 
+            <label id="readCheckLabel" for="readCheck">Have you read it?</label> 
             <br>
-            <select name="readSelect" id="read">
-                <option value="true">Yes</option>
-                <option value="false">No</option>
-            </select>
+            <input name="read" id="readCheck" type="checkbox">
             <br>
-            <input id="submit" type="submit" value="Submit">
+            <button id="submit" onclick="submitForm()" type="submit" >Submit</button>
         </form>
     </div>
     </div>

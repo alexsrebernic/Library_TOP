@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
 $backgroundColor:#495464;
 $secondaryColor:#BBBFCA;
 $tertiaryColor:#E8E8E8;
 $fourColor:#F4F4F2;
 $letterColor:#F3F1F5;
 $fontFamily:'Raleway', sans-serif;
-
+$fontFamily2: 'Roboto', sans-serif;
 #container {
    width: 80%;
    height: 66.6vh;
@@ -42,11 +44,144 @@ $fontFamily:'Raleway', sans-serif;
    
 }
     #catalog {
+     width: 95%;
+     height: 95%;
+     display: flex;
+     align-items: center;
+     align-items: center;
+    }
+    #containerCatalog {
         width: 100%;
         height: 90%;
         display: flex;
+        align-items: center;
         flex-direction: row;
-        border: 1px solid gray;
         margin-top: 5px;
+        svg {
+            width: 30px;
+            cursor: pointer;
+        }
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 30rem;
+    width: 18.75rem;
+    border: 1px solid $secondaryColor;
+    border-radius: 15px;
+    margin-left: 3.125rem;
+    
+    h2 {
+        width: 97%;
+        height: 8%;
+        justify-self: center;
+        align-self: center;
+        margin-bottom: 5px;
+        font-family: $fontFamily2;
+        font-weight: 400;
+        font-size: 18px;
+        color: $secondaryColor;
+        text-align: start;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid $secondaryColor;
+    }
+   #titleText{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 500;
+        border-bottom: none;
+        color: black;
+        margin-bottom: 0;
+        text-decoration: underline;
+    }
+
+    button {
+        border: none;
+        width: 100%;
+        height: 10%;
+    }
+    .readCardTrue {
+        border-radius: 14px;
+        font-family: $fontFamily2;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0%;
+        margin-bottom: 5px;
+    }
+    .readCardTrue{
+        background-color:  white ;
+        border: 1px solid  #009900 ;
+        color:  #009900 ;
+        transition: 0.3s ease;
+    }
+    .readCardTrue:hover{
+        background-color: rgb(17, 138, 17);
+        color: white;
+        cursor: pointer;
+    }
+    .readCardFalse{
+        border: 1px solid $tertiaryColor;
+        color: $secondaryColor;
+        transition: 0.3s ease;
+    }
+    .readCardFalse {
+        border-radius: 14px;
+        font-family: $fontFamily2;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0%;
+        margin-bottom: 5px;
+    }
+    .readCardFalse:hover{
+        background-color: $tertiaryColor;
+        color: white;
+        cursor: pointer;
+
+    }
+    .deleteCard{
+        font-family: $fontFamily2;
+        border-bottom-right-radius: 14px;
+        border-bottom-left-radius: 14px;
+        background-color: white;
+        border: 1px solid rgb(252, 145, 145);
+        transition: 0.3s ease;
+        font-weight: 500;
+        color: rgb(252, 145, 145);
+    }
+    .deleteCard:hover{
+        background-color: rgb(252, 145, 145);
+        color: white;
+        cursor: pointer;
+    }
+    #imgUrl {
+        height: 55%;
+        width: 95%;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        border-radius: 5px;
+        border: 1px solid $secondaryColor;
+    }
+
+}
+
+// animation
+
+.desvanecerse {
+    animation: shadow 2s ease forwards;
+
+}
+
+@keyframes shadow {
+    0% {
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
     }
 }
