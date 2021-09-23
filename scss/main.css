@@ -24,6 +24,7 @@
 
 #container #addBook {
   margin-top: 10px;
+  background-color: white;
   border: 1px solid black;
   border-radius: 6px;
   padding: 10px;
@@ -57,14 +58,19 @@
 
 #container #catalog {
   width: 95%;
-  height: 95%;
+  height: 98%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 #container #containerCatalog {
@@ -81,11 +87,14 @@
       -ms-flex-direction: row;
           flex-direction: row;
   margin-top: 5px;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 #container #containerCatalog svg {
   width: 30px;
   cursor: pointer;
+  display: none;
 }
 
 .card {
@@ -107,6 +116,8 @@
   border: 1px solid #BBBFCA;
   border-radius: 15px;
   margin-left: 3.125rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .card h2 {
@@ -154,7 +165,6 @@
 }
 
 .card .readCardTrue {
-  border-radius: 14px;
   font-family: "Roboto", sans-serif;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0%;
@@ -163,7 +173,7 @@
 
 .card .readCardTrue {
   background-color: white;
-  border: 1px solid  #009900;
+  border: 1.5px solid  #009900;
   color: #009900;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
@@ -176,14 +186,13 @@
 }
 
 .card .readCardFalse {
-  border: 1px solid #E8E8E8;
+  border: 1.5px solid #E8E8E8;
   color: #BBBFCA;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 
 .card .readCardFalse {
-  border-radius: 14px;
   font-family: "Roboto", sans-serif;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0%;
@@ -201,7 +210,7 @@
   border-bottom-right-radius: 14px;
   border-bottom-left-radius: 14px;
   background-color: white;
-  border: 1px solid #fc9191;
+  border: 1.5px solid #fc9191;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   font-weight: 500;
@@ -286,12 +295,13 @@ footer svg:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 21vh;
   width: 100%;
 }
 
@@ -411,14 +421,6 @@ footer svg:hover {
   height: 10%;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
-}
-
-#backgroundPopUp #popUp #formPop select {
-  border: none;
-  background-color: rgba(212, 212, 212, 0.18);
-  border-radius: 15px;
-  width: 50%;
-  height: 10%;
 }
 
 #backgroundPopUp #popUp #formPop label {

@@ -18,6 +18,7 @@ $fontFamily2: 'Roboto', sans-serif;
    justify-content: center;
    #addBook{
        margin-top: 10px;
+       background-color: white;
        border: 1px solid black;
         border-radius: 6px;
        padding: 10px;
@@ -45,10 +46,14 @@ $fontFamily2: 'Roboto', sans-serif;
 }
     #catalog {
      width: 95%;
-     height: 95%;
+     height: 98%;
      display: flex;
      align-items: center;
-     align-items: center;
+     box-sizing: border-box;
+     white-space: nowrap;
+     overflow-x: auto;
+     overflow-y: hidden;
+     -webkit-overflow-scrolling: touch;
     }
     #containerCatalog {
         width: 100%;
@@ -57,9 +62,12 @@ $fontFamily2: 'Roboto', sans-serif;
         align-items: center;
         flex-direction: row;
         margin-top: 5px;
+        overflow-x: hidden;
+	    overflow-y: hidden;
         svg {
             width: 30px;
             cursor: pointer;
+            display: none;
         }
     }
 }
@@ -74,7 +82,7 @@ $fontFamily2: 'Roboto', sans-serif;
     border: 1px solid $secondaryColor;
     border-radius: 15px;
     margin-left: 3.125rem;
-    
+    box-sizing: border-box;
     h2 {
         width: 97%;
         height: 8%;
@@ -107,7 +115,6 @@ $fontFamily2: 'Roboto', sans-serif;
         height: 10%;
     }
     .readCardTrue {
-        border-radius: 14px;
         font-family: $fontFamily2;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0%;
@@ -115,7 +122,7 @@ $fontFamily2: 'Roboto', sans-serif;
     }
     .readCardTrue{
         background-color:  white ;
-        border: 1px solid  #009900 ;
+        border: 1.5px solid  #009900 ;
         color:  #009900 ;
         transition: 0.3s ease;
     }
@@ -125,12 +132,11 @@ $fontFamily2: 'Roboto', sans-serif;
         cursor: pointer;
     }
     .readCardFalse{
-        border: 1px solid $tertiaryColor;
+        border: 1.5px solid $tertiaryColor;
         color: $secondaryColor;
         transition: 0.3s ease;
     }
     .readCardFalse {
-        border-radius: 14px;
         font-family: $fontFamily2;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0%;
@@ -147,7 +153,7 @@ $fontFamily2: 'Roboto', sans-serif;
         border-bottom-right-radius: 14px;
         border-bottom-left-radius: 14px;
         background-color: white;
-        border: 1px solid rgb(252, 145, 145);
+        border: 1.5px solid rgb(252, 145, 145);
         transition: 0.3s ease;
         font-weight: 500;
         color: rgb(252, 145, 145);
@@ -169,6 +175,9 @@ $fontFamily2: 'Roboto', sans-serif;
     }
 
 }
+
+
+
 
 // animation
 

@@ -56,15 +56,7 @@ $fontFamily:'Roboto', sans-serif;
                 height: 10%;
                 transition: 0.3s ease;
             }
-            
-            select {
-                border: none;
-                background-color: rgba($color: #d4d4d4, $alpha: 0.18);
-                border-radius: 15px;
-                width: 50%;
-                height: 10%;
-            }
-           
+                     
             label {
                 align-self: flex-start;
                 margin-left: 40px;
@@ -95,6 +87,9 @@ $fontFamily:'Roboto', sans-serif;
         }
     }
 }
+
+
+
 
 // Animation
 
