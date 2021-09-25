@@ -61,22 +61,26 @@ function closePopUp (){
     backgroundPopUpElement.style.display = "none"
 }
 
-function checkRead(readCard){
-    let parent = readCard.parentNode
-    let index = Array.from(parent.parentNode.children).indexOf(parent)
-    if(readCard.textContent == "Read"){
-        readCard.setAttribute("class","readCardFalse")
-        readCard.textContent = "Not Read"
+
+function checkRead(element){
+    let parent = element.parentNode
+    let grandparent = parent.parentNode
+    let index = Array.from(grandparent.parentNode.children).indexOf(grandparent)
+    if(element.textContent == "Read"){
+        element.setAttribute("class","readCardFalse")
+        element.textContent = "Not Read"
         myLibrary[index].read = false
         localStorage.setItem("Library",JSON.stringify(myLibrary))
-
-    } else if(readCard.textContent == "Not Read"){
-        readCard.setAttribute("class","readCardTrue")
-        readCard.textContent = "Read"
+        localStorage.setItem('document', catalogDisplay.innerHTML)
+     
+    } else if(element.textContent == "Not Read"){
+        element.setAttribute("class","readCardTrue")
+        element.textContent = "Read"
         myLibrary[index].read = true
         localStorage.setItem("Library",JSON.stringify(myLibrary))
-
+        localStorage.setItem('document', catalogDisplay.innerHTML)
     }
+
 }
 
 function deleteCard(element){
@@ -86,7 +90,7 @@ function deleteCard(element){
     catalogDisplay.removeChild(grandparent)
     myLibrary.splice(index,1)
     localStorage.setItem("Library",JSON.stringify(myLibrary))
-    localStorage.setItem('document', JSON.stringify(catalogDisplay.innerHTML))
+    localStorage.setItem('document', catalogDisplay.innerHTML)
 
 }
 function submitForm (){
@@ -98,7 +102,7 @@ function submitForm (){
     createCard()
     clearForm()
     localStorage.setItem('document', catalogDisplay.innerHTML)
-
+    console.log(myLibrary)
 }
 
 function createCard(){
@@ -114,8 +118,8 @@ function createCard(){
     readCard.setAttribute("class","readCard")
     cardMoving.style.display = "inline-block"
     cardMoving.id = "cardMoving"
-    readCard.id = Math.floor(Math.random() * 100)
-    deleteCard.id = Math.floor(Math.random() * 100)
+    readCard.id = Math.floor(Math.random() * 1000)
+    deleteCard.id = Math.floor(Math.random() * 1000)
     titleText.id = "titleText"
     imgUrl.id = "imgUrl"
     card.appendChild(titleText)
@@ -152,9 +156,7 @@ function clearForm(){
     urlInput.value = ""
 }
 
-
 function addBookToLibrary(newBook){
-    let value = 0
     if(newBook instanceof Book){
         myLibrary.push(newBook)
     localStorage.setItem("Library",JSON.stringify(myLibrary))
@@ -165,9 +167,18 @@ function addBookToLibrary(newBook){
 //WEB STORAGE API
 
 function checkLocalStorage (){
-    let saved = JSON.parse(localStorage.getItem('document'))
-    if(saved){
-        catalogDisplay.innerHTML = saved
+    let document = localStorage.getItem('document')
+    let savedStringify = JSON.stringify(document)
+    let savedParsed = JSON.parse(savedStringify)
+    if(savedParsed){
+        catalogDisplay.innerHTML = savedParsed
     }
+    let library  = localStorage.getItem("Library")
+    let savedParsedLibrary = JSON.parse(library)
+    if(savedParsedLibrary != null){
+        myLibrary = savedParsedLibrary
+    }
+    
+    
 }
 checkLocalStorage()
